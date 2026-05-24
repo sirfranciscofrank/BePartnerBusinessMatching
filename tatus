@@ -1,0 +1,184 @@
+[33mcommit be5e0cf9b6631c5ba91dd4c66fdb6df664852bc3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    Create a new file
+
+[33mcommit 14a5849c468489eec58feccd0f792147cc7f00a2[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    Fix Vercel deployment: remove GitHub Pages config from next.config.ts
+    
+    - Remove output: 'export', basePath, and assetPrefix (GitHub Pages settings
+      that broke Vercel by preventing .next/ folder generation and routing / to 404)
+    - Remove NEXT_PUBLIC_BASE_PATH env var and update HeroSection to use plain path
+    - Add out/ to .gitignore and untrack the committed static export artifacts
+
+[33mcommit 1753ba7bfe94de618f580a360a5de3156e636095[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    trigger redeploy
+
+[33mcommit d91bcf4bdbd42643b2c8a46b436bd952ecd78ac3[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    move assets to public folder
+
+[33mcommit 053edebd21dde9cfff3fad791f952797e688ddbe[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    fix vdo on hero
+
+[33mcommit d56b7d8f616c2c5d1a5592d49b4f1e8e31b84610[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    fix vdo on hero
+
+[33mcommit 19dfe69ff473ef9fda8974eb9d9d2e1f084a4940[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    fix video path
+
+[33mcommit b92020118e2b9b8567c9060abcd2ce8d0f716332[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    deploy
+
+[33mcommit e3c7d18aa33edf5665ffcb0c52cae9ac89f8a256[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    fix asset prefix
+
+[33mcommit ed316461191f83460d678e1f67e9b1cbda35f011[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    Allow git page
+
+[33mcommit 2e6375cd237c7197fff6f5266675b364daf47b6c[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    Update Changelog
+
+[33mcommit 43239b8b8db23afcb373e46bc56e0aa04cf904df[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    Finished Landing Page
+
+[33mcommit ce65550fa8ebab4f732b628d35f83baf1a0caeb0[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    revamped herosection with video and cards
+
+[33mcommit db794770addbc82ec865a0b41f4ddfd82220c54f[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    Renaming some images files and structures for future problems
+
+[33mcommit 762f5572a1d308739557064dc241d0bcd8459799[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    recoloring herosection
+
+[33mcommit 1b6bcd742440145e21aa4f37376cdc6e266bb88c[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    Update readme.md to current project vision
+
+[33mcommit 377ba3c94d24c670c4b7cafefb3eaf4a131665f9[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    Update readme.md to current project vision
+
+[33mcommit 6069851dceaaf7e3edf0d7e06bf29172c86f3edb[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    Change CTA on HeroSections
+
+[33mcommit f787a7982769b4f709540fe8c777ea774b3003b7[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    Change web title
+
+[33mcommit 0e9179637ad08ece40fff99ac1c9eb969bf064af[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    Refine landing page layout and MVP messaging
+
+[33mcommit e73537ce2e2bab668c193958402bd51f6d92d124[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    feat(ui): overhaul overall UI layout and styling
+
+[33mcommit 757b006aa98b69ae004aa159cc445d08b0e54141[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    Rebranded to BePartner. Suggested by Mom
+
+[33mcommit 9d760474417206a695830eab9cd078086648be6b[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    enhance UI
+
+[33mcommit 33a95c208bf41fe1a7e9c5499b3d914ccd310b44[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    Adding sections into my Landing Page
+
+[33mcommit c0caa720353f075088f7a6f70d0cabc951fe8b95[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    update nav bar
+
+[33mcommit d3f4b6de1920cb9b34b888e1c136f1056c8020b4[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    Update readme with Logo.png
+
+[33mcommit b777c741a4e7a783bb3d5c53246a169834fbcf6c[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    Update readme with Logo.png
+
+[33mcommit 2481c1fdb96122bf35a43c7f2e993d5e98941cde[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    Update readme to align with project vision and more
+
+[33mcommit dfc34e1ce9c77b33fe3ace410b2a4839eb1f6e72[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    feat: Setup Next.js project template for Frankly
+
+[33mcommit 5817c0ed93ace5edece2ab64ed06d0f3082ffe45[m
+Author: sirfranciscofrank <sirfrancisco2003@gmail.com>
+Commit: sirfranciscofrank <sirfrancisco2003@gmail.com>
+
+    Initial commit from Create Next App
