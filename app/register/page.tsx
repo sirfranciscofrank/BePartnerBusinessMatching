@@ -1,25 +1,46 @@
-import AuthLayout from "../components/auth/AuthLayout"
+import Link from "next/link"
 import AuthVisualPanel from "../components/auth/AuthVisualPanel"
 import AuthFormCard from "../components/auth/AuthFormCard"
+import RegisterFeatureShowcase from "../components/auth/RegisterFeatureShowcase"
 
 export default function RegisterPage() {
   return (
-    <AuthLayout
-      visualPanel={
+    <main className="relative flex h-screen overflow-hidden">
+
+      {/* Back to home — mobile only; desktop version lives inside AuthVisualPanel */}
+      <Link
+        href="/"
+        className="absolute top-4 left-4 sm:top-6 sm:left-6 z-10 lg:hidden flex items-center gap-1.5 text-sm font-medium
+          text-(--color-body) hover:text-(--color-brand)
+          transition-colors duration-150
+          focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-brand-light)
+          rounded"
+      >
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M10 12L6 8l4-4" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+        Back to home
+      </Link>
+
+      {/* Left panel — desktop only */}
+      <div
+        className="hidden lg:flex w-1/2 flex-col items-stretch justify-start overflow-hidden"
+        style={{ background: "linear-gradient(160deg, #071A3D 0%, #0B255A 60%, #1E3A8A 100%)" }}
+      >
         <AuthVisualPanel
-          heading="Find relevant Thai business partners faster."
-          subtext=""
-          bullets={[
-            "Build your business profile",
-            "Get matched by industry, location, and tags",
-            "Connect only when both sides accept",
-          ]}
-        />
-      }
-      formCard={
+          heading="Find Thai business partners faster."
+          subtext="Discover companies by industry, location, and what they need."
+          contentTopSpacing="mt-1"
+        >
+          <RegisterFeatureShowcase />
+        </AuthVisualPanel>
+      </div>
+
+      {/* Right panel */}
+      <div className="flex w-full lg:w-1/2 flex-col bg-(--color-surface)">
         <AuthFormCard
-          title="Create your account"
-          subtitle="Start building your BePartner business profile."
+          title="Create your business profile"
+          subtitle="Join BePartner and start finding relevant companies."
           footerText="Already have an account?"
           footerLinkText="Sign in"
           footerLinkHref="/login"
@@ -27,10 +48,7 @@ export default function RegisterPage() {
           <form className="space-y-4">
 
             <div>
-              <label
-                htmlFor="businessName"
-                className="block text-xs font-medium text-(--color-body) mb-1"
-              >
+              <label htmlFor="businessName" className="block text-xs font-medium text-(--color-body) mb-1">
                 Business Name
               </label>
               <input
@@ -44,10 +62,7 @@ export default function RegisterPage() {
             </div>
 
             <div>
-              <label
-                htmlFor="email"
-                className="block text-xs font-medium text-(--color-body) mb-1"
-              >
+              <label htmlFor="email" className="block text-xs font-medium text-(--color-body) mb-1">
                 Business Email
               </label>
               <input
@@ -61,10 +76,7 @@ export default function RegisterPage() {
             </div>
 
             <div>
-              <label
-                htmlFor="password"
-                className="block text-xs font-medium text-(--color-body) mb-1"
-              >
+              <label htmlFor="password" className="block text-xs font-medium text-(--color-body) mb-1">
                 Password
               </label>
               <input
@@ -78,10 +90,7 @@ export default function RegisterPage() {
             </div>
 
             <div>
-              <label
-                htmlFor="confirmPassword"
-                className="block text-xs font-medium text-(--color-body) mb-1"
-              >
+              <label htmlFor="confirmPassword" className="block text-xs font-medium text-(--color-body) mb-1">
                 Confirm password
               </label>
               <input
@@ -103,7 +112,8 @@ export default function RegisterPage() {
 
           </form>
         </AuthFormCard>
-      }
-    />
+      </div>
+
+    </main>
   )
 }

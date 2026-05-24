@@ -4,53 +4,66 @@ import logo from "../../assets/images/logo-primary.png"
 
 type AuthVisualPanelProps = {
   heading: string
-  subtext: string
-  bullets?: string[]
+  subtext?: string
+  children?: React.ReactNode
+  contentTopSpacing?: string
 }
 
 export default function AuthVisualPanel({
   heading,
   subtext,
-  bullets,
+  children,
+  contentTopSpacing = "mt-1",
 }: AuthVisualPanelProps) {
   return (
-    <div className="flex w-full max-w-xl flex-col items-start text-left space-y-9">
+    <div className="h-full w-full flex flex-col">
 
-      {/* Logo */}
-      <Link
-        href="/"
-        className="flex items-center gap-2 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
-      >
-        <Image
-          src={logo}
-          alt="BePartner Logo"
-          className="h-11 w-11 object-contain"
-          priority
-        />
-        <span className="text-xl font-bold tracking-tight text-white">
-          BePartner
-        </span>
-      </Link>
+      {/* Back to home — standalone top row */}
+      <div className="px-14 pt-10 mb-8">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-1.5 text-sm font-medium text-white/50 hover:text-white/90 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
+        >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M10 12L6 8l4-4" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          Back to home
+        </Link>
+      </div>
 
-      <h2 className="max-w-xl text-4xl font-semibold leading-tight tracking-tight text-white xl:text-5xl">
-        {heading}
-      </h2>
+      {/* Content block: logo → headline → subtext → children */}
+      <div className={`px-14 ${contentTopSpacing} flex flex-col`}>
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 rounded-md w-fit focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+        >
+          <Image
+            src={logo}
+            alt="BePartner Logo"
+            className="h-9 w-9 object-contain"
+            priority
+          />
+          <span className="text-lg font-bold tracking-tight text-white">
+            BePartner
+          </span>
+        </Link>
 
-      {bullets ? (
-        <ul className="w-full max-w-lg space-y-4">
-          {bullets.map((bullet, i) => (
-            <li key={i} className="flex items-start gap-3 text-base leading-relaxed text-white/75">
-              <span className="mt-1 h-5 w-5 shrink-0 flex items-center justify-center rounded-full bg-(--color-accent)/20 text-(--color-accent)">
-                <svg width="10" height="8" viewBox="0 0 9 7" fill="none" aria-hidden="true">
-                  <path d="M1 3.5l2.5 2.5 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </span>
-              {bullet}
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p className="text-sm leading-relaxed text-white/70">{subtext}</p>
+        <h2 className="mt-8 max-w-sm text-3xl font-semibold leading-tight tracking-tight text-white xl:text-4xl">
+          {heading}
+        </h2>
+
+        {subtext && (
+          <p className="mt-3 text-sm leading-relaxed text-white/60 max-w-xs">
+            {subtext}
+          </p>
+        )}
+      </div>
+
+      {/* Page-specific slot — wider padding so showcase card fills the panel */}
+      {children && (
+        <div className="mt-10 px-4">
+          {children}
+        </div>
       )}
 
     </div>
