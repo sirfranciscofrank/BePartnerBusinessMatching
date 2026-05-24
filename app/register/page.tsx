@@ -2,6 +2,7 @@ import Link from "next/link"
 import AuthVisualPanel from "../components/auth/AuthVisualPanel"
 import AuthFormCard from "../components/auth/AuthFormCard"
 import RegisterFeatureShowcase from "../components/auth/RegisterFeatureShowcase"
+import bgImage from "../assets/images/auth-background.png"
 
 export default function RegisterPage() {
   return (
@@ -24,8 +25,12 @@ export default function RegisterPage() {
 
       {/* Left panel — desktop only */}
       <div
-        className="hidden lg:flex w-1/2 flex-col items-stretch justify-start overflow-hidden"
-        style={{ background: "linear-gradient(160deg, #071A3D 0%, #0B255A 60%, #1E3A8A 100%)" }}
+        className="hidden lg:flex w-1/2 flex-col items-stretch justify-center overflow-hidden"
+        style={{
+          backgroundImage: `radial-gradient(ellipse at 20% 80%, rgba(56,189,248,0.12) 0%, transparent 55%), radial-gradient(ellipse at 80% 15%, rgba(99,102,241,0.15) 0%, transparent 50%), linear-gradient(155deg, rgba(2,6,23,0.98) 0%, rgba(7,18,55,0.97) 35%, rgba(13,38,110,0.95) 65%, rgba(29,78,216,0.92) 100%), url(${bgImage.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
         <AuthVisualPanel
           heading="Find Thai business partners faster."
